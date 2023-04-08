@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <div align="center">
+                    <h1>Sky-Chat</h1>
+                    <br>
+                    <br>
+                    <h2>Join Chat</h2>
+                </div>
+                <div class="form-input">
+                    <label>Group Name :</label>
+                    <input type="text" id="room" name="room" placeholder="Group name">
+                    <label>Group Password :</label>
+                    <input type="text" id="room-pass" name="room-pass" placeholder="Group password">
+                    <label>Username :</label>
+                    <input type="text" id="username" name="username" placeholder="Username">
+                </div>
+                <div class="form-input">
+                    <div align="center">
+                        <button id="join-user">Enter Chat</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="screen chat-screen ">
+            <div class="header">
+                <div class="logo">Sky-Chat</div>
+                <div class="group" id="group"></div>
+                <button id="exit-chat">Leave Chat</button>
+            </div>
+            <div class="messages">
+                
+            </div>
+            <div class="typebox">
+                <input type="file" id="file" accept="image/*">
+                <label for="file" align="center" style="padding:3px;" class="h"><h2 class="bi bi-paperclip"></h1></label>
+                <input type="text" id="message-input">
+                <button id="send-message" ><h2 class="bi bi-send"></h2></button>
+            </div>
+        </div>
+    </div>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
